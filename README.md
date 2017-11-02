@@ -11,12 +11,10 @@ Scrapes 700-1000 images in ~40s on my Core i5 (depends # of threads and internet
 You can input the search keyword that you would like to use as well as the save directory as variable and run the application.
 Alternatively, you can also use it via the command prompt as follows:
 
-###### H6
-"ImageDownloader.exe <search_keyword> <save_directory>"
+###### "ImageDownloader.exe <search_keyword> <save_directory>"
 
 Example:
-###### H6
-ImageDownloader.exe wallpaper C:\Users\JP\Desktop\OutputFolder\
+###### "ImageDownloader.exe wallpaper C:\Users\JP\Desktop\OutputFolder\"
 
 # Details
 Threads can be modified by changing the 'ThreadDivider' constant in Google.vb
