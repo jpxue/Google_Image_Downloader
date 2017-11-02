@@ -158,7 +158,7 @@ Public Class GoogleScraper
 
     Private _Driver As ChromeDriver
     Private _JS As IJavaScriptExecutor
-    Private BaseURL As String = "https://www.google.com/search?tbm=isch&source=hp&biw=1920&bih=974&ei=O6L6WYaXAcirsAeVqZ-YDQ&q=" ' "https://www.bing.com/images/search?q="
+    Private BaseURL As String = "https://www.google.com/search?tbm=isch&source=hp&q="
 
     Sub New(ByVal keyword As String, ByVal dir As String)
         _Scraped = 1
@@ -226,7 +226,7 @@ Public Class GoogleScraper
             Return String.Empty
         End If
 
-        Dim o As Object = _JS.ExecuteScript("var cont=document.getElementsByTagName(""body"")[0];var imgs=document.getElementsByTagName(""a"");var i=0;var divv= document.createElement(""div"");var aray=new Array();var j=-1;var ret = """";while(++i<imgs.length){if(imgs[i].href.indexOf(""/imgres?imgurl=http"")>0){aray[++j]=decodeURIComponent(imgs[i].href).split(/=|%|&/)[1].split(""?imgref"")[0];ret = ret + aray[j] + ""\n"";}}cont.insertBefore(divv,cont.childNodes[0]);return ret;")
+        Dim o As Object = _JS.ExecuteScript("var imgs=document.getElementsByTagName(""a"");var i=0;var aray=new Array();var j=-1;var ret = """";while(++i<imgs.length){if(imgs[i].href.indexOf(""/imgres?imgurl=http"")>0){aray[++j]=decodeURIComponent(imgs[i].href).split(/=|%|&/)[1].split(""?imgref"")[0];ret = ret + aray[j] + ""\n"";}}return ret;")
         Return o.ToString()
 
     End Function
