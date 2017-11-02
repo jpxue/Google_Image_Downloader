@@ -18,7 +18,7 @@ Module Module1
     Sub Main()
         Console.Title = "[VB.Net] Google Image Downloader"
 
-        Dim keyword As String = "poo"
+        Dim keyword As String = "cats"
         Dim saveDirectory As String = "Images\"
 
         If (My.Application.CommandLineArgs.Count = 2) Then

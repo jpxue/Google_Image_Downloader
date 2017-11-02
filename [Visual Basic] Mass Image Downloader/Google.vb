@@ -89,6 +89,7 @@ Friend Class ImageDownloader
             Console.ForegroundColor = ConsoleColor.Yellow
             Console.WriteLine(url)
             Console.ForegroundColor = ConsoleColor.Gray
+            fileName = String.Concat(fileName, ".jpg")
         End If
 
         Dim wc As New WebClient()
@@ -109,6 +110,10 @@ Friend Class ImageDownloader
         End Try
     End Sub
 
+    Private Function getProgressString() As String
+        Return String.Format("Images = {0}  |  Threads Running = {1}  |  Keyword = {2}", GoogleScraper._Scraped.ToString(), _Threads.ToString(), GoogleScraper._Keyword)
+    End Function
+
     Public Sub Download()
         _Start = DateTime.Now
         _Threads += 1
@@ -119,12 +124,12 @@ Friend Class ImageDownloader
             DownloadImage(url)
             url = GetOneURL() 'Cycle
 
-            Console.Title = String.Format("Images = {0}  |  Threads Running {1}", GoogleScraper._Scraped.ToString(), _Threads.ToString())
+            Console.Title = getProgressString()
             Thread.Sleep(10)
         End While
 
         _Threads -= 1
-        Console.Title = If(_Threads > 0, String.Format("Images = {0}  |  Threads Running {1}", GoogleScraper._Scraped.ToString(), _Threads.ToString()), String.Format("Scraped {0} Images!", GoogleScraper._Scraped.ToString()))
+        Console.Title = If(_Threads > 0, getProgressString(), String.Format("Scraped {0} Images!  |  Keyword = {1}", GoogleScraper._Scraped.ToString(), GoogleScraper._Keyword))
         'Console.WriteLine("{0} has terminated.", Thread.CurrentThread.Name)
 
         SyncLock outputLock
@@ -149,10 +154,10 @@ Public Class GoogleScraper
 
     Public Shared _Scraped As UInteger
     Public Shared _Directory As String
+    Public Shared _Keyword As String
 
     Private _Driver As ChromeDriver
     Private _JS As IJavaScriptExecutor
-    Private _Keyword As String
     Private BaseURL As String = "https://www.google.com/search?tbm=isch&source=hp&biw=1920&bih=974&ei=O6L6WYaXAcirsAeVqZ-YDQ&q=" ' "https://www.bing.com/images/search?q="
 
     Sub New(ByVal keyword As String, ByVal dir As String)

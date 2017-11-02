@@ -4,6 +4,8 @@ A simple multi-threaded program which uses Selenium to obtain images via Google 
 Can easily be modified to include other search engines.
 Scrapes 700-1000 images in ~40s on my Core i5 (depends # of threads and internet speed).
 
+![alt tag](https://raw.githubusercontent.com/jpxue/Google_Image_Downloader/master/app.png)
+
 # How To Run
 
 You can input the search keyword that you would like to use as well as the save directory as variable and run the application.
