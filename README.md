@@ -17,5 +17,6 @@ Example:
 ###### "ImageDownloader.exe wallpaper C:\Users\JP\Desktop\OutputFolder\"
 
 # Details
-Threads can be modified by changing the 'ThreadDivider' constant in Google.vb
-Google limits the amount of images shown to <1000. I have tried searching for ways to overcome this but have found none yet :(
+Threads can be modified by changing the 'ThreadDivider' constant in Google.
+
+Google limits the amount of images shown to <1000; I have tried searching for ways to overcome this but have found none yet :(
