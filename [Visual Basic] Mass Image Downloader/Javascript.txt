@@ -1,4 +1,4 @@
-﻿//Javascript code to get link URLs
+﻿//Javascript code to get URLs
 //Modified from: https://32hertz.blogspot.com.mt/2015/03/download-all-images-from-google-search.html
 
 var cont=document.getElementsByTagName("body")[0];
