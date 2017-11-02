@@ -3,7 +3,7 @@
 A simple multi-threaded program which uses Selenium to obtain images via Google Images.
 Can easily be modified to include other search engines.
 
-Scrapes 700-1000 images in ~40s on my Core i5 (depends # of threads and internet speed).
+Scrapes ####700-1000 images in ####~40s on my Core i5 (depends # of threads and internet speed).
 
 ![alt tag](https://raw.githubusercontent.com/jpxue/Google_Image_Downloader/master/app.png)
 
@@ -22,7 +22,7 @@ Threads can be modified by changing the 'ThreadDivider' constant in Google.
 
 Google limits the amount of images shown to <1000; I have tried searching for ways to overcome this but have found none.
 
-# Porting to other Search Engines
+# Porting to Other Search Engines
 In Google.vb:
 Edit the BaseURL variable to your search engine query URL + POST data. 
 Update the getImageLinks() function, make it search for href or img tags (Regex, HTMLAgilityPack).
