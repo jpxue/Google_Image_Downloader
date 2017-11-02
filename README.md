@@ -1,9 +1,9 @@
 # Google Image Downloader
 
-A simple multi-threaded program which uses Selenium to obtain images via Google Images.
-Can easily be modified to include other search engines.
+A simple **multi-threaded** program which uses **Selenium** to obtain images via **Google Images**.
+Can easily be modified to include other search engines (see below).
 
-Scrapes ####700-1000 images in ####~40s on my Core i5 (depends # of threads and internet speed).
+Scrapes **700-1000** images in **40s** on my Core i5 (depends # of threads and internet speed).
 
 ![alt tag](https://raw.githubusercontent.com/jpxue/Google_Image_Downloader/master/app.png)
 
