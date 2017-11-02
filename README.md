@@ -25,5 +25,5 @@ Google limits the amount of images shown to <1000; I have tried searching for wa
 # Porting to Other Search Engines
 In Google.vb:
 Edit the BaseURL variable to your search engine query URL + POST data. 
-Update the getImageLinks() function, make it search for href or img tags (Regex, HTMLAgilityPack).
+Update the getImageLinks() function, make it search for href or img tags (Regex, HTMLAgilityPack or Selenium FindElements).
 Lastly, comment out all the code in ShowAll() except for the scrolling down part.
