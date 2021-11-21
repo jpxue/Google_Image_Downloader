@@ -1,6 +1,6 @@
 # Google Image Downloader
 
-A simple **multi-threaded** program which uses **Selenium/Headless-Chrome** to obtain images via **Google Images** or by means of a **Google Search**.
+A simple **multi-threaded** program which uses **Selenium/Headless-Chrome** to obtain images via **Google Images** or by means of a **Google Search**. Built so as to download images with the intent of potentially training AI models.
 
 # How it Works
 **Google Images** uses the Google Images search engine to obtain images.  
